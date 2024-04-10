@@ -17,7 +17,7 @@ public class JwtEntryPoint implements AuthenticationEntryPoint {
 
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
-        LOGGER.error("Error commence method");
+        LOGGER.error("Error commence method", authException);
         response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "No autorizado");
     }
 }
