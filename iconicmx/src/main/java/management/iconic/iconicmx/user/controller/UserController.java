@@ -16,7 +16,7 @@ public class UserController {
     @Autowired
     PasswordEncoder passwordEncoder;
 
-    @GetMapping("/")
+    @GetMapping("/all")
     public ResponseEntity<Message> getAll(){
         return userService.findAll();
     }
@@ -31,7 +31,7 @@ public class UserController {
         return userService.save(new User(userDTO.getUsername(), passwordEncoder.encode(userDTO.getPassword()), userDTO.getRoles()));
     }
 
-    @PutMapping("/")
+    @PutMapping("/update")
     public ResponseEntity<Message> update(@RequestBody UserDTO userDTO){
         return userService.update(new User(userDTO.getId(), userDTO.getUsername(), passwordEncoder.encode(userDTO.getPassword()), userDTO.getRoles()));
     }

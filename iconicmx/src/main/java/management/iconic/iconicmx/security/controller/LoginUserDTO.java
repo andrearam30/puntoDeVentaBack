@@ -1,6 +1,5 @@
 package management.iconic.iconicmx.security.controller;
 
-import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
 
 public class LoginUserDTO {

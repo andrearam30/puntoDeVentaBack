@@ -7,6 +7,7 @@ import management.iconic.iconicmx.user.model.User;
 import java.util.Set;
 
 @Entity
+@Table(name = "role")
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
